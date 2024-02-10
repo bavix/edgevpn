@@ -1,7 +1,7 @@
 FROM golang:1.22-alpine3.19 as builder
 
 RUN apk --no-cache add git &&\
-    git clone --depth=1 https://github.com/mudler/edgevpn.git /tmp/edgevpn &&\
+    git clone --depth=1 --branch v0.24.6 https://github.com/mudler/edgevpn.git /tmp/edgevpn &&\
     cd /tmp/edgevpn &&\
     go build -v -ldflags "-s -w" -o /edgevpn &&\
     cd - &&\
