@@ -26,8 +26,6 @@ RUN adduser \
     --no-create-home \
     --uid "${UID}" \
     "${USER}" && \
-    sysctl -w net.core.rmem_max=2500000 &&\
-    sysctl -w net.core.wmem_max=2500000 &&\
     apk add --update --no-cache tzdata curl
 
 COPY --from=builder /edgevpn .
