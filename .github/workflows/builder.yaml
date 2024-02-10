@@ -55,3 +55,6 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64,linux/arm/v6,linux/arm/v7,linux/arm64/v8,linux/386,linux/ppc64le
+          build-args: |
+            version=${{ github.ref_name }}
+            commit=${{ github.sha }}
