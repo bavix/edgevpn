@@ -7,7 +7,7 @@ LABEL org.opencontainers.image.licenses=Apache-2.0
 ARG version
 
 RUN apk --no-cache add git &&\
-    git clone --depth=1 --branch v0.27.0 https://github.com/mudler/edgevpn.git /tmp/edgevpn &&\
+    git clone --depth=1 --branch v0.28.3 https://github.com/mudler/edgevpn.git /tmp/edgevpn &&\
     cd /tmp/edgevpn &&\
     export commit=$(git rev-parse HEAD) &&\
     go build -v -ldflags "-s -w -X 'github.com/mudler/edgevpn/internal.Version=${version:-dev}' -X 'github.com/mudler/edgevpn/internal.Commit=${commit:-dev}'" -o /edgevpn &&\
