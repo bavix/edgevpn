@@ -14,7 +14,7 @@ RUN apk --no-cache add git &&\
     cd - &&\
     rm -rf /tmp/edgevpn
 
-FROM alpine:3.22
+FROM alpine:3.23
 WORKDIR /
 ENV USER=edgevpn
 ENV UID=10001
