@@ -1,4 +1,4 @@
-FROM golang:1.26-alpine3.22 as builder
+FROM golang:1.26-alpine3.23 as builder
 
 LABEL org.opencontainers.image.source=https://github.com/mudler/edgevpn
 LABEL org.opencontainers.image.description="⛵ The immutable, decentralized, statically built p2p VPN without any central server and automatic discovery! Create decentralized introspectable tunnels over p2p with shared tokens"
